@@ -4,54 +4,63 @@ Here are the primary types and functions included in the `container/list` packag
 
 ## Types
 
-### List
-- The main type representing a doubly linked list.
+- List
+  - The main type representing a doubly linked list.
 
-### Element
-- Represents a node in the list, containing the value and pointers to the next and previous elements.
+- Element
+  - Represents a node in the list, containing the value and pointers to the next and previous elements.
 
 ## Functions
 
 ### Creating a List
-- **New()**: 
+
+- `listName := list.New()`: 
   - Creates and returns a new empty list.
 
 ### List Operations
-- **PushBack(v interface{}) *Element**: 
-  - Adds a new element with the value `v` at the back of the list and returns the new element.
 
-- **PushFront(v interface{}) *Element**: 
-  - Adds a new element with the value `v` at the front of the list and returns the new element.
+- `PushBack(x)`: 
+  - Adds a new element with the value `x` at the back of the list and returns the new element.
 
-- **InsertAfter(value interface{}, mark *Element) *Element**: 
-  - Inserts a new element with the value `value` after the specified mark element.
+- `PushFront(x)`:
+  - Adds a new element with the value `x` at the front of the list and returns the new element.
 
-- **InsertBefore(value interface{}, mark *Element) *Element**: 
-  - Inserts a new element with the value `value` before the specified mark element.
+- `InsertAfter(x, element)`:
+  - Inserts a new element with the value `x` after the specified mark element.
 
-- **Remove(e *Element) interface{}**: 
+- `InsertBefore(x, element)`:
+  - Inserts a new element with the value `x` before the specified mark element.
+
+- `Remove(element)`:
   - Removes the specified element from the list and returns its value.
 
-- **MoveToFront(e *Element)**: 
+- `MoveToFront(element)`:
   - Moves the specified element to the front of the list.
 
-- **MoveToBack(e *Element)**: 
+- `MoveToBack(element)`:
   - Moves the specified element to the back of the list.
 
 ### Accessing Elements
-- **Front() *Element**: 
+
+- `listName.Front()`:
   - Returns the first element of the list or `nil` if the list is empty.
+  - Can use `listName.Front().Value` to access element value
 
-- **Back() *Element**: 
+- `listName.Back()`:
   - Returns the last element of the list or `nil` if the list is empty.
+  - Can use `listName.Back().Value` to access element value
 
-- **Len() int**: 
+- `listName.Len()`:
   - Returns the number of elements in the list.
 
-- **Init() *List**: 
+- `listName.Init()`:
   - Initializes or clears the list, allowing it to be reused.
 
 ### Iteration
-- **Move functions**:
-  - **Next() *Element**: Returns the next element in the list.
-  - **Prev() *Element**: Returns the previous element in the list.
+
+#### Move functions:
+  - `listName.Next()`: 
+    - Returns the next element in the list.
+
+  - `listName.Prev()`: 
+    - Returns the previous element in the list.
