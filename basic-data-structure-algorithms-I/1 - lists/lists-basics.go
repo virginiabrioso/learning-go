@@ -6,6 +6,11 @@ import (
 )
 
 func main() {
+	// create a list with fruits names in one line
+	fruits := []string{"apple", "banana", "cherry"}
+	// print fruits list
+	fmt.Println(fruits)
+
 	// Create a new list
 	myList := list.New()
 
@@ -41,7 +46,7 @@ func main() {
 	myList.PushFront(40)
 
 	// Iterating through the list with Next and Prev
-	fmt.Println("Elements after re-adding:")
+	fmt.Println("Elements after re-adding...")
 	for e := myList.Front(); e != nil; e = e.Next() {
 		fmt.Println("Element:", e.Value)
 	}
