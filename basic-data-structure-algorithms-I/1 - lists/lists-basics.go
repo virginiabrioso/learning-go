@@ -6,12 +6,36 @@ import (
 )
 
 func main() {
-	// create a list with fruits names in one line
-	fruits := []string{"apple", "banana", "cherry"}
-	// print fruits list
-	fmt.Println(fruits)
 
-	// Create a new list
+	// Arrays
+	// Arrays are fixed-size sequences of elements of the same type
+	var fruitsA [3]string
+	fruitsA[0] = "apple"
+	fmt.Println(fruitsA)
+
+	fruitsB := [3]string{"apple", "banana", "cherry"}
+	fmt.Println(fruitsB)
+
+	fruitsC := [...]string{"apple", "banana", "cherry"}
+	fmt.Println(fruitsC)
+
+	// Slices
+	// Slice is a reference to an array and manages the length and capacity of the array
+	var fruitsD []string
+	fruitsD = append(fruitsD, "apple")
+	fmt.Println(fruitsD)
+
+	fruitsE := []string{"apple", "banana", "cherry"}
+	fmt.Println(fruitsE)
+
+	fruitsF := make([]string, 3) // only length is specified
+	fruitsF[0] = "apple"
+
+	fruitsG := make([]string, 3, 5) // length and capacity are specified
+	fruitsG[0] = "apple"
+
+	// Lists
+	// Lists are arrays with dynamic sizes
 	myList := list.New()
 
 	// Push elements to the front and back
