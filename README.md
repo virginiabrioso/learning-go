@@ -1,6 +1,6 @@
-# 🚀 Preptech Exercises Repository
+# 🚀 Go Notebook
 
-Welcome to the **Preptech Exercises** repository! 🎉 Here, you’ll find an exciting collection of coding challenges and exercises inspired by the amazing course sponsored by Google. Get ready to dive deep into the world of **algorithms** and **data structures**—skills that will elevate your coding game to new heights! 🏆
+Get ready to dive deep into the world of **algorithms** and **data structures**—skills that will elevate your coding game to new heights! 🏆
 
 ## 🌟 What is Preptech?
 
